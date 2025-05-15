@@ -320,6 +320,33 @@ body{
     color: #333;
 }
 
+
+/* Quienes somos */
+.quienes-somos {
+    background-color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.quienes-somos .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quienes-somos h2 {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.quienes-somos p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
 /* FOOTER */
 
 .main-footer {

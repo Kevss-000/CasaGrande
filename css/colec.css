@@ -147,3 +147,55 @@ body{
 .social-icons a:hover {
     color: #fff;
 }
+
+/* Colecciones */
+
+.colecciones {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.colecciones h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.colecciones-com {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.coleccion-info {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.coleccion-info:hover {
+    transform: translateY(-5px);
+}
+
+.coleccion-info img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.coleccion-info h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.main-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
