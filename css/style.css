@@ -1,0 +1,383 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost" sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #FFF8F1;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    height: 90px;
+    position: relative;
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    padding-bottom: 5px; 
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: black; 
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%; 
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.icons i {
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+    color: #A6D4FA;
+}
+
+/*Banner*/
+.banner{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner img{
+    width: 100%;
+    background-size: cover;
+    display: block;
+
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+}
+
+.banner-text h1{
+    font-family: "Cal Sans",sans-serif;
+    font-size: 4rem;
+    color: black;
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+}
+
+.banner-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.banner-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Productos*/
+.products {
+    padding: 4rem 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.products h2 {
+    font-family: "Cal Sans",sans-serif;;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    .product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.add-to-cart {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.6rem 1.5rem;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Colecciones */
+
+.collections {
+    padding: 4rem 2rem;
+    background-color: black;
+    text-align: center;
+}
+
+.collections h2 {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.05);
+}
+
+.collection-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.collection-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: "Jost", sans-serif;
+}
+
+.collection-btn {
+    padding: 0.5rem 1.2rem;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.collection-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* INFORMACION */
+
+.info-cuadros{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.info-box{
+    flex: 1 1 200px;
+    max-width: 350px;
+    text-align: center;
+    color: black;
+}
+
+.info-box i{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.info-box h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+.info-box p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* FOOTER */
+
+.main-footer {
+    background-color: #111;
+    color: #f5f5f5;
+    padding: 3rem 2rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
